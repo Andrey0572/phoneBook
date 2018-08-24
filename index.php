@@ -27,8 +27,8 @@ $data = json_decode($phone,true);
             <td><?php echo $dates["lastName"] ?></td>
             <td><?php echo $dates["address"] ?></td>
             <td><?php 
-            foreach($dates["phoneNumber"] as $dates["items"])
-                echo "\n " . $dates["items"]. "\n"
+            for($i = 0; $i < count($dates["phoneNumber"]); $i++ ) 
+                echo $dates["phoneNumber"][$i]."<br/>"            
              ?></td>
         </tr>
         <?php endforeach ?>
